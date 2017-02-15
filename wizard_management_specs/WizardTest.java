@@ -1,17 +1,18 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import wizard_management.*;
-import behaviours.Protectorable;
 
 public class WizardTest {
 
   Wizard wizard;
   Broomstick broomstick;
-  Protectorable protector;
+  Dragon protector;
+  Ogre ogre;
 
   @Before
   public void before(){
     protector = new Dragon("Rex");
+    ogre = new Ogre("Bob");
     broomstick = new Broomstick("Nimbus", 10);
     wizard = new Wizard("Toby", broomstick, protector);
   }
@@ -54,8 +55,14 @@ public class WizardTest {
   }
 
   // @Test
-  // public void wizardCanProtectSelf(){
+  // public void wizardCanProtectSelfWithDragon(){
   //   wizard = new Wizard("Oz", dragon, dragon);
+  //   assertEquals();
+  // }
 
+  // @Test
+  // public void wizardCanProtectSelfWithOgre(){
+  //   wizard = new Wizard("Rumple", magiccarpet, ogre)
+  //   assertEquals();
   // }
 }
