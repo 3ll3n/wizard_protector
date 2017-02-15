@@ -49,4 +49,10 @@ public class WizardTest {
     wizard.setRide(dragon);
     assertEquals("Standing up tall, beating wings, lift off!", wizard.fly());
   }
+
+  // @Test
+  // public void wizardCanProtectSelf(){
+  //   wizard = new Wizard("Oz", dragon, dragon);
+  //   assertEquals("I can protect myself", wizard.protectSelf());
+  // }
 }
