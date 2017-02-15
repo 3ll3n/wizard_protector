@@ -20,4 +20,9 @@ public class DragonTest {
   public void canFly(){
     assertEquals(dragon.fly(),"Standing up tall, beating wings, lift off!");
   }
+
+  @Test
+  public void protect(){
+    assertEquals("I will protect you with fire!", dragon.protect());
+  }
 }

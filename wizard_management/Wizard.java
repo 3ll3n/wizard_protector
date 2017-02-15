@@ -5,7 +5,7 @@ import behaviours.Protectorable;
 public class Wizard {
   String name;
   private Flyable ride;
-  private Defenderable defend;
+  private Protectorable protector;
 
   public Wizard(String name, Flyable ride, Protectorable protector){
     this.name = name;
@@ -30,9 +30,9 @@ public class Wizard {
   }
 
   // need to create a protectSelf method
-  // public void protectSelf(){
-  //   return this.protect = protect;
-  // }
+  public void protectSelf(){
+    
+  }
   
   
 }

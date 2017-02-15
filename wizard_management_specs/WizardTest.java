@@ -1,16 +1,19 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import wizard_management.*;
+import behaviours.Protectorable;
 
 public class WizardTest {
 
   Wizard wizard;
   Broomstick broomstick;
+  Protectorable protector;
 
   @Before
   public void before(){
+    protector = new Dragon("Rex");
     broomstick = new Broomstick("Nimbus", 10);
-    wizard = new Wizard("Toby", broomstick);
+    wizard = new Wizard("Toby", broomstick, protector);
   }
 
   @Test
@@ -32,14 +35,14 @@ public class WizardTest {
   @Test
   public void canFlyDragon(){
     Dragon dragon = new Dragon("Smaug");
-    wizard = new Wizard("Ridcully", dragon);
+    wizard = new Wizard("Ridcully", dragon, dragon);
     assertEquals("Standing up tall, beating wings, lift off!", wizard.fly());
   }
 
   @Test
   public void canFlyMagicCarpet(){
     MagicCarpet magiccarpet = new MagicCarpet("pink");
-    wizard = new Wizard("Leon", magiccarpet);
+    wizard = new Wizard("Leon", magiccarpet, protector);
     assertEquals("Hovering up, straightening out, flying off!", wizard.fly());
   }
 
@@ -53,6 +56,6 @@ public class WizardTest {
   // @Test
   // public void wizardCanProtectSelf(){
   //   wizard = new Wizard("Oz", dragon, dragon);
-  //   assertEquals("I can protect myself", wizard.protectSelf());
+
   // }
 }

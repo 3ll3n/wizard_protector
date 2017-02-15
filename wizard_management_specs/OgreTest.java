@@ -15,4 +15,9 @@ public class OgreTest {
   public void hasName(){
     assertEquals("Freddie", ogre.getName());
   }
+
+  @Test
+  public void protect(){
+    assertEquals("I will protect you with my shield!", ogre.protect());
+  }
 }
