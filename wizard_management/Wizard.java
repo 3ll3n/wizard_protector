@@ -29,9 +29,13 @@ public class Wizard {
     this.ride = ride;
   }
 
-  // need to create a protectSelf method
-  public void protectSelf(){
-    
+  // need to create a protect method
+  public String protect(){
+    return this.protector.protect();
+  }
+
+  public void setProtector(Protectorable protector){
+    this.protector = protector;
   }
   
   

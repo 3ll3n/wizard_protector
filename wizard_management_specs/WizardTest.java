@@ -54,15 +54,25 @@ public class WizardTest {
     assertEquals("Standing up tall, beating wings, lift off!", wizard.fly());
   }
 
-  // @Test
-  // public void wizardCanProtectSelfWithDragon(){
-  //   wizard = new Wizard("Oz", dragon, dragon);
-  //   assertEquals();
-  // }
+  @Test
+  public void wizardCanProtectWithDragon(){
+    Dragon dragon = new Dragon("Frank");
+    wizard = new Wizard("Oz", dragon, protector);
+    assertEquals("I will protect you with fire!", wizard.protect());
+  }
 
-  // @Test
-  // public void wizardCanProtectSelfWithOgre(){
-  //   wizard = new Wizard("Rumple", magiccarpet, ogre)
-  //   assertEquals();
-  // }
+  @Test
+  public void wizardCanProtectWithOgre(){
+    MagicCarpet magiccarpet = new MagicCarpet("green");
+    wizard = new Wizard("Rumple", magiccarpet, ogre);
+    assertEquals("I will protect you with my bad breath!", wizard.protect());
+  }
+
+  @Test
+  public void canSetProtector(){
+    wizard = new Wizard("Colin", broomstick, ogre);
+    assertEquals("I will protect you with my bad breath!", wizard.protect());
+    wizard.setProtector(protector);
+    assertEquals("I will protect you with fire!", wizard.protect());
+  }
 }

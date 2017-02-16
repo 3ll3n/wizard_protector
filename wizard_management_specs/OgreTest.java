@@ -18,6 +18,6 @@ public class OgreTest {
 
   @Test
   public void protect(){
-    assertEquals("I will protect you with my shield!", ogre.protect());
+    assertEquals("I will protect you with my bad breath!", ogre.protect());
   }
 }

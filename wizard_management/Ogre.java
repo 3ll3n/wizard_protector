@@ -8,7 +8,7 @@ public class Ogre extends MythicalBeast implements Protectorable {
   }
   
   public String protect(){
-    return "I will protect you with my shield!";
+    return "I will protect you with my bad breath!";
   }
 
 }
